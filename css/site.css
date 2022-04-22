@@ -1,0 +1,147 @@
+@font-face {
+    font-family: "Noto Serif JP";
+    src: url("/fonts/NotoSerifJP-Regular.otf") format("opentype");
+    unicode-range: U+3000-30FF,
+        U+FF00-FFEF,
+        U+4E00-9FAF;
+}
+
+/*************************
+Global Styling
+**************************/
+:root {
+    font-family: "Noto Serif JP", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", "ヒラギノ角ゴ Pro W3", Osaka, メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "ＭＳ ゴシック", "MS Gothic", "Noto Sans CJK JP", TakaoPGothic, sans-serif;
+    font-display: swap;
+}
+
+html {
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+    min-height: 100%;
+    margin: 0;
+}
+
+/* 
+    Avoid Text Overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+    1. Remove the bottom border in Chrome 57-
+    2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+    /* 1 */
+    border-bottom: none;
+    /* 2 */
+    text-decoration: underline;
+    /* 2 */
+    text-decoration: underline dotted;
+}
+
+/*
+    Hide anchor tags with no href
+    This is used for Prev/Next chapter buttons in the reader
+*/
+a:not([href]) {
+    display: none;
+}
+
+/*************************
+Novel Info Styling
+**************************/
+.description {
+    /* render newlines */
+    white-space: pre-line;
+    width: 100%;
+    font-size: 1.5rem;
+    max-width: max(45ch, 60%);
+    margin: 4rem auto;
+    line-height: 150%;
+    -webkit-font-smoothing: antialiased;
+}
+
+.chapters {
+    font-size: 1.5rem;
+    width: max(45ch, 60%);
+}
+
+/*************************
+Reader Styling
+**************************/
+:lang(ja) main,
+.chapterHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 3vw;
+}
+
+.chapterHeader a {
+    font-size: 1.2rem;
+    color: #5d5d5d;
+    text-decoration: none;
+}
+
+.chapterHeader a:hover {
+    color: black;
+}
+
+.chapterNumber {
+    font-size: 3.5rem;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+.chapterTitle {
+    margin: 0;
+    font-size: 2rem;
+    border-bottom: 2px solid black;
+    -webkit-font-smoothing: antialiased;
+    width: 100%;
+    max-width: 45ch;
+    text-align: center;
+}
+
+.chapter {
+    /* render newlines */
+    white-space: pre-line;
+    width: 100%;
+    font-size: 2rem;
+    max-width: 45ch;
+    margin: auto;
+    line-height: 150%;
+    -webkit-font-smoothing: antialiased;
+}
+
+.chapter p {
+    margin: 0;
+}
+
+.chapterControls {
+    font-size: 1.5rem;
+    margin-bottom: 5rem;
+}
+
+footer {
+    position: fixed;
+    height: 2rem;
+    bottom: 0;
+    display: grid;
+    place-items: center;
+    background-color: white;
+    width: 100vw;
+    z-index: 1000;
+}
